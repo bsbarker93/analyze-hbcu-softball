@@ -1,12 +1,15 @@
 #import modules
 import pandas as pd
 import re
+import os
 import requests
 from bs4 import BeautifulSoup
 
 
 def list_to_csv(filename, aList):
-    with open(f"./csv/{filename}", "w") as file:
+    abs_path = os.path.dirname(__file__)
+    rel_path = "./data/"+filename
+    with open(os.path.join(abs_path, rel_path), "w") as file:
         file.writelines(aList)
         file.close()
     return
