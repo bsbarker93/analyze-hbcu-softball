@@ -4,7 +4,6 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-year = 2012
 
 def list_to_csv(filename, aList):
     with open(f"./csv/{filename}", "w") as file:
@@ -35,3 +34,7 @@ def team_stats(year):
             data = [re.sub(r"(?<=[\d\.])\s+", ",", str.strip(line))+"\n" for line in lst]
             list_to_csv(filename, data)
     return
+
+years = [2010, 2011, 2012]
+for year in years:
+    team_stats(year)
