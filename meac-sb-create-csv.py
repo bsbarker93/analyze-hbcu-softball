@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 year = 2012
 
 def list_to_csv(filename, aList):
-    with open(f"./{filename}", "w") as file:
+    with open(f"./csv/{filename}", "w") as file:
         file.writelines(aList)
         file.close()
     return
