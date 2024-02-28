@@ -70,4 +70,4 @@ def team_stats(year):
     return
 
 #save csv files for years of interest
-[team_stats(year) for year in [2014]] 
+[team_stats(year) for year in range(2011, 2023)] 
